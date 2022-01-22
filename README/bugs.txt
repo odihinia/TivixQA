@@ -16,4 +16,16 @@
 
 9- Not sure if bug or just slow API for the demo page, but i kept getting "too much load" at the first click. Maybe just a server issue
 
-10-
+10- 404 when trying to click the final "Rent" button with the message "ups, cannot redirect to success url" This is either intended for test purposes or not intended, and a bug.
+
+11- Backing out of an error on /rent/# when clicking "rent" and retrying yields Status:500: "KeyError - dropoff_date". This means the date is now incorrect, so it's a bug.
+
+12- You are able to fill the rent form with incorrect data like:
+Name: " "
+Surname: " " The names and surnames shouldn't accept only white spaces, as those are usually trimmed on the back-end and would result in a NULL object.
+Card number: "111122223333444455556666" which is 24 characters, and normal creidit cards have 16. Also, you can input "1" which is way too short. Tighter front-end valdiation needed.
+Email: only validation for email is that it must contain "@" somewhere. It took "@" successfully. It should be X@Y.Z at the minimum. Also takes stuff like " @." which shouldn't work.
+
+13- You are able to get stuck on the "/details" page when backing out to the search page, and clicking "rent" immediately. The "Rent" button doesn't show up in that case.
+
+14- The "Search" button in the top left corner of the page only reidrects you to the baseUrl instead of doing whatever it is supposed to do + it throws a "Please fill pickup and drop off dates" Error.
