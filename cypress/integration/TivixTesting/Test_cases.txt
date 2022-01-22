@@ -1,0 +1,15 @@
+TEST CASE 1:
+{
+testCaseID:1
+Test Scenario: The user is able to rent a car successfully.
+
+Prerequisites: none
+
+Test steps: {
+    1- visit the baseUrl
+    2- Select pick-up date and drop-off date. //(As the country and city have defaults, and model can be null)
+    3- Click a "Rent" button, no matter which one.
+    4-
+
+}
+}

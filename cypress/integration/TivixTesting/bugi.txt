@@ -1,0 +1,19 @@
+1 - 404 request po Favico.ico
+
+2- Coutry selection typo - "Germainy" instead of "Germany"
+
+3- You can chose a city not in it's respective country, and only the city selection matters, the coutry automatically updates to the city's respective country
+
+4- the "model" input field doesn't seem to do anything. (It doesn't filter out any models, like it's supposed to)
+
+5- Location: Poland, Wroclaw - This is not what i chose earlier in bug 3: i chose france/wrocław. Also, the display should read Wrocław, Poland instead (because that is the convention of naming cities)
+
+6- the # field (number of car?) is not ordered at all. It also should update dynamically. (Unless it's an orderID system - then it should incorporate more data to make it more expandable and better for SELECTing with ID in SQL)
+
+7- The date being incorrect (i.e 1st date being after the 2nd, going back in time) should automatically block the user from sending that data to the API. Theres no front-end handling of it right now.
+
+8-ValueError at /time data '23123-12-31' does not match format '%Y-%m-%d' - you can manually input a bad date. Somehow the date picker works correctly when you input a 5 number or more year.
+
+9- Not sure if bug or just slow API for the demo page, but i kept getting "too much load" at the first click. Maybe just a server issue
+
+10-
