@@ -32,3 +32,4 @@ Email: only validation for email is that it must contain "@" somewhere. It took 
 
 14- The "Search" button in the top left corner of the page only reidrects you to the baseUrl instead of doing whatever it is supposed to do + it throws a "Please fill pickup and drop off dates" Error.
 
+15- The server randomly 500's and has the too many requests error often. This is most likely not a bug, but problems with internet or API.

@@ -24,14 +24,14 @@ Test Data: none
 
 Expected Result: Once the form is filled, the confirmation page is displayed.
 
-Actual results: Confirmation page 404's - But this is visible in cypress.
+Actual results: Confirmation page 404's - But this is visible in cypress. Test fails because it's unable to assert on a confirmation (or sth confirming anything)
 }
 
 
 TEST CASE 2: positive e2e
 {
 testCaseID:2
-Test Scenario: The user is able to find a car model, click rent, and because he has changed his mind, go back and choose another model to rent, and click rent successfully. The information on the page should update as well.
+Test Scenario: The user is able to find a car by model, then search again with a different model. The models should filter out of the results.
 
 Prerequisites: none
 
@@ -40,12 +40,7 @@ Test steps: {
     2- Select pick-up date and drop-off date as well as the country and coressponding city.
     3- Click a "Rent" button, no matter which one.
     4- Validate that the information on the page is correct (city is the same, dates are the same)
-    5- Click "Rent!"
-    6- Back out (changed your mind)
-    7- Back out again (to the search page)
-    8- Find another car model you would like to rent
-    9-click on it's rent button.
-    10- follow through with the rental until it's done.
+    5- Validate that the model was filtered out, and all displayed rows of cars have the "X" model.
 }
 Browser: Chrome 97
 
@@ -53,7 +48,7 @@ Test Data: none
 
 Expected Result: There should be no differences in the page between one click and the other, and the models should be filtered out successfully.
 
-Actual result: Since the model field doesn't do anything, the cars are not filtered out correctly.
+Actual result: Since the model field doesn't do anything, the cars are not filtered out correctly. The test fails on the third row.
 }
 
 
@@ -63,17 +58,11 @@ Actual result: Since the model field doesn't do anything, the cars are not filte
 TEST CASE 3: negative e2e test
 {
 testCaseID:3
-Test Scenario: The user inputs incorrect data on the page and the page displays the correct errors (these are usually all different test cases, but i've compressed them down to 1, to make it more about positive testing than negative)
+Test Scenario: The user inputs incorrect data on the page and the page displays the correct errors (these are usually all different test cases, but i've compressed them down to 1, since they're really similar and short.)
 
 Prerequisites: none
 
 Test steps: {
-    1- visit the baseUrl
-    2- Select country "France"
-    3- Select city "Berlin"
-    4- Select a correct date pair
-    5- Click "Rent"
-    6- Check if the error for "Incorrect city/country" pair is shown.
     
     1-Visit baseUrl
     2-Select Incorrect date pairs (pick-up after drop-off)
@@ -84,8 +73,9 @@ Test steps: {
     3-Select car, doesn't matter which.
     4-Select "Rent!"
     5- Input nothing and assert on the errors displayed.
+    6- Input bad info and assert on the errors displayed.
 
-    //this can be done with incorrect data in the name, surname, email, and card number, but since it's already written as a bug in "bugs.txt", i will omit it here.
+    //this can be done with incorrect data in the name, surname, email, and card number
 
 
 }
@@ -94,5 +84,5 @@ Browser: Chrome 97
 Test Data: none
 
 Expected Result: The correct error messages are shown with the incorrect data inputted.
-Actual results: see cypress once the test is launched.
+Actual results: >See cypress once the test is launched.
 }
