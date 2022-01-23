@@ -18,7 +18,7 @@ Test steps: {
     7- Click "Rent"
     8- Expect a confirmation page (but the url yields a 404, either intentionally or unintentionally, see bug #10)
 }
-Browser: Chrome 94
+Browser: Chrome 97
 
 Test Data: none
 
@@ -41,15 +41,19 @@ Test steps: {
     3- Click a "Rent" button, no matter which one.
     4- Validate that the information on the page is correct (city is the same, dates are the same)
     5- Click "Rent!"
-    6- Input the required fields, within the constraits given.
-    7- Click "Rent"
-    8- Expect a confirmation page (but the url yields a 404, either intentionally or unintentionally, see bug #10)
+    6- Back out (changed your mind)
+    7- Back out again (to the search page)
+    8- Find another car model you would like to rent
+    9-click on it's rent button.
+    10- follow through with the rental until it's done.
 }
-Browser: Chrome 94
+Browser: Chrome 97
 
 Test Data: none
 
 Expected Result: There should be no differences in the page between one click and the other, and the models should be filtered out successfully.
+
+Actual result: Since the model field doesn't do anything, the cars are not filtered out correctly.
 }
 
 
@@ -85,7 +89,7 @@ Test steps: {
 
 
 }
-Browser: Chrome 94
+Browser: Chrome 97
 
 Test Data: none
 

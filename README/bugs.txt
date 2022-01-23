@@ -9,6 +9,8 @@
 5- Location: Poland, Wroclaw - This is not what i chose earlier in bug 3: i chose france/wrocław. Also, the display should read Wrocław, Poland instead (because that is the convention of naming cities)
 
 6- the # field (number of car?) is not ordered at all. It also should update dynamically. (Unless it's an orderID system - then it should incorporate more data to make it more expandable and better for SELECTing with ID in SQL)
+(Look i know it's just a HTML <tr> with row # but this is usually unacceptable.)
+
 
 7- The date being incorrect (i.e 1st date being after the 2nd, going back in time) should automatically block the user from sending that data to the API. Theres no front-end handling of it right now.
 
@@ -29,3 +31,4 @@ Email: only validation for email is that it must contain "@" somewhere. It took 
 13- You are able to get stuck on the "/details" page when backing out to the search page, and clicking "rent" immediately. The "Rent" button doesn't show up in that case.
 
 14- The "Search" button in the top left corner of the page only reidrects you to the baseUrl instead of doing whatever it is supposed to do + it throws a "Please fill pickup and drop off dates" Error.
+
