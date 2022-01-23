@@ -236,11 +236,11 @@ describe('Car Rent -', () =>{
 
 
         cy.get('.btn')
-            .contains("Rent")
+            .contains("Rent")  //button get
             .click()
 
         cy.contains("Name is required").should("be.visible")
-        cy.contains("Last name is required").should("be.visible")
+        cy.contains("Last name is required").should("be.visible") //error msges
         cy.contains("Email is required").should("be.visible")
         cy.contains("Card number is required").should("be.visible")
 
